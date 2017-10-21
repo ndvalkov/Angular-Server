@@ -85,11 +85,12 @@ const attachTo = (app, data) => {
     })
     .post('/', function (req, res) {
       var user = req.user;
-      if (!user) {
-        res.status(401)
-          .json('Not authorized User');
-        return;
-      }
+      
+      // if (!user) {
+      //   res.status(401)
+      //     .json('Not authorized User');
+      //   return;
+      // }
 
       req.checkBody('title', 'Title is required').notEmpty();
       req.checkBody('content', 'Content is required').notEmpty();
