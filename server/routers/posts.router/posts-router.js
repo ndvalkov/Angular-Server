@@ -96,10 +96,10 @@ const attachTo = (app, data) => {
       req.checkBody('content', 'Content is required').notEmpty();
       req.checkBody('category', 'Category is required').notEmpty();
 
-      req.sanitizeBody('title').escape();
-      req.sanitizeBody('content').escape();
-      req.sanitizeBody('category').escape();
-      req.sanitizeBody('imageUrl').escape();
+      // req.sanitizeBody('title').escape();
+      // req.sanitizeBody('content').escape();
+      // req.sanitizeBody('category').escape();
+      // req.sanitizeBody('imageUrl').escape();
 
       req.sanitizeBody('title').trim();
       req.sanitizeBody('content').trim();
